@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>My Favourite Characters from Stranger Things</title>
+</head>
+
+<body>
+    <h1>My Favourite Characters from Stranger Things</h1>
+    <img src="http://www.trbimg.com/img-588eb6a8/turbine/la-et-sag-awards-2017-winners-room-pictures-010/" width="600"
+        id="Img">
+    <h2 id="Name"> Character Name</h2>
+    <button type="button" onclick="Next()"> Click to see the next character</button>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(rgb(121, 9, 9), Black);
+            color: whitesmoke;
+        }
+
+        img {
+            border-color: whitesmoke;
+            border-style: solid;
+            border-width: 5px;
+            padding: 10px;
+        }
+
+        button {
+            height: 20px;
+            color: linear-gradient(blue, green);
+        }
+    </style>
+    <script>
+        var Imgs = [
+            "https://i.pinimg.com/736x/02/1a/e0/021ae0b12d9b164019c1bab5349be838.jpg",
+            "https://64.media.tumblr.com/23a59a7400c383c771d148e5f6c722c4/tumblr_pu4g53w9Ow1xb0gsoo8_400.png",
+            "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stranger-things-s03e02-12m1s17309f-r-1562790114.jpg?crop=0.502xw:1.00xh;0.483xw,0&resize=480:*",
+            "https://i.pinimg.com/originals/e3/1d/80/e31d801dd6d5c0d28feaf70f59408675.png",
+            "https://dailyresearchplot.com/wp-content/uploads/2021/03/Stranger-Things-Season-4-Gaten-Matarazzo.jpg",
+            "https://images.immediate.co.uk/production/volatile/sites/3/2019/07/erica-176a2fe.jpg?quality=90&resize=620,413"
+        ]
+        var Names = ["Mike Wheeler", "Max Mayfield [MADAMX]", "Steve Harrington", "Robin Buckley", "Dustin Henderson",
+            "Erica Sinclair"
+        ]
+        var i = 0;
+
+        function Next() {
+            document.getElementById("Img").src = Imgs[i];
+            document.getElementById("Name").innerHTML = Names[i];
+
+            i++
+            if (i > 5) {
+                i = 0
+            }
+        }
+    </script>
+
+</body>
+
+</html>
